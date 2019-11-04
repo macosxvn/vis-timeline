@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Timeline | A lot of grouped data</title>
+  <title>Timeline | other | A lot of grouped data</title>
 
   <script src="../../../dist/vis-timeline-graph2d.min.js"></script>
   <link href="../../../dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
@@ -28,12 +28,12 @@
   Current number of items: <span id='count'>100</span>
 </p>
 
-<div id="mytimeline"></div>
+<div id="visualization"></div>
 
 <script>
   /**
    * Get URL parameter
-   * http://www.netlobo.com/url_query_string_javascript.html
+   * https://www.netlobo.com/url_query_string_javascript.html
    */
   function gup( name ) {
     name = name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
@@ -98,7 +98,7 @@
   };
 
   // create a Timeline
-  var container = document.getElementById('mytimeline');
+  var container = document.getElementById('visualization');
   timeline = new vis.Timeline(container, null, options);
   timeline.setGroups(groups);
   timeline.setItems(items);

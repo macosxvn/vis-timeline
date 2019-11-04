@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Timeline | A lot of grouped data</title>
+  <title>Timeline | groups | Vertical Items Hide</title>
 
   <script src="../../../docs/js/jquery.min.js"></script>
   <script src="../../../dist/vis-timeline-graph2d.min.js"></script>
@@ -25,13 +25,11 @@
   <h3 id="visibleItemsContainer"></h3>
 </div>
 
-<div id="mytimeline"></div>
+<div id="visualization"></div>
 <br>
 
 <script>
   function showVisibleItems() {
-    var a = timeline.getVisibleItems();
-    console.log(a);
     document.getElementById("visibleItemsContainer").innerHTML = ""
     document.getElementById("visibleItemsContainer").innerHTML += a;
   };
@@ -108,9 +106,8 @@
     end: new Date(1000*60*60*24 + (new Date()).valueOf()),
   };
 
-
   // create a Timeline
-  var container = document.getElementById('mytimeline');
+  var container = document.getElementById('visualization');
   timeline = new vis.Timeline(container, null, options);
   timeline.setGroups(groups);
   timeline.setItems(items);

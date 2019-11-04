@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Timeline | Dynamic Content</title>
+  <title>Timeline | items | Dynamic Content</title>
 
   <script src="../../../dist/vis-timeline-graph2d.min.js"></script>
   <link href="../../../dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
@@ -34,18 +34,18 @@
 </head>
 <body>
 
-<div id="myTimeline"></div>
+<div id="visualization"></div>
 
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
-  var container = document.getElementById('myTimeline');
+  var container = document.getElementById('visualization');
 
   // Create a DataSet (allows two way data-binding)
   var items = new vis.DataSet([
     {id: 1, value: 0.2, content: 'item 1', start: '2014-04-20', end: '2014-04-26'},
     {id: 2, value: 0.6, content: 'item 2', start: '2014-05-14', end: '2014-05-18'},
     {id: 3, type: 'point', content: 'item 3', start: '2014-04-15', end: '2014-05-18'},
-    {id: 4, content: 'item 4 with visibleFrameTemplate in item', start: '2014-04-16', end: '2014-04-26', visibleFrameTemplate: '<div class="progress-wrapper"><div class="progress" style="width:80%"></div><label class="progress-label">80 per cent<label></div>'
+    {id: 4, content: 'item 4 with visibleFrameTemplate in item', start: '2014-04-16', end: '2014-04-26', visibleFrameTemplate: '<div class="progress-wrapper"><div class="progress" style="width:80%"></div><label class="progress-label">80%<label></div>'
     }
   ]);
 
